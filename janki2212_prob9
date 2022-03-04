@@ -1,0 +1,15 @@
+class Solution:
+
+    def findMin(self, nums: List[int]) -> int:
+        l = nums[0]
+        r = nums[len(nums)-1]
+        m = nums[(0+(len(nums)-1))]//2
+        if(m>l):
+            while(m>r):
+                m=m+1
+                return m
+             
+        else:
+            while(l>m):
+                l=l+1
+                return l
